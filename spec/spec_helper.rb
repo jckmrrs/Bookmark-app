@@ -97,4 +97,22 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  require 'capybara/rspec'
+  require 'simplecov'
+  require 'simplecov-console'
+
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+    SimpleCov::Formatter::Console,
+    # Want a nice code coverage website? Uncomment this next line!
+    # SimpleCov::Formatter::HTMLFormatter
+  ])
+  SimpleCov.start
+
+  # For accurate test coverage measurements, require your code AFTER 'SimpleCov.start'
+
+  ENV['RACK_ENV'] = 'test'
+
+  require File.join(File.dirname(__FILE__), '..', 'app.rb')
+  Capybara.app = Bookmark_Manager
+  require 'features/web_helpers.rb'
 end

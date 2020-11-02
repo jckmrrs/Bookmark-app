@@ -9,6 +9,7 @@
 **User story 2:**
 ```
   As a user,
+  So that I can expand my reading list,
   I want to be able to add a bookmark.
 ```
 **User story 3:**

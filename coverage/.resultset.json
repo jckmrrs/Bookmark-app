@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dan/Projects/bookmark/app.rb": {
+      "/Users/jmorr271/Projects/Databases/Bookmark-app/app.rb": {
         "lines": [
           1,
           null,
@@ -26,12 +26,12 @@
           null
         ]
       },
-      "/Users/dan/Projects/bookmark/spec/features/web_helpers.rb": {
+      "/Users/jmorr271/Projects/Databases/Bookmark-app/spec/features/web_helpers.rb": {
         "lines": [
 
         ]
       },
-      "/Users/dan/Projects/bookmark/spec/bookmarks_spec.rb": {
+      "/Users/jmorr271/Projects/Databases/Bookmark-app/spec/bookmarks_spec.rb": {
         "lines": [
           1,
           null,
@@ -48,7 +48,7 @@
           null
         ]
       },
-      "/Users/dan/Projects/bookmark/lib/bookmarks.rb": {
+      "/Users/jmorr271/Projects/Databases/Bookmark-app/lib/bookmarks.rb": {
         "lines": [
           1,
           1,
@@ -65,7 +65,7 @@
           null
         ]
       },
-      "/Users/dan/Projects/bookmark/spec/features/view_bookmarks_spec.rb": {
+      "/Users/jmorr271/Projects/Databases/Bookmark-app/spec/features/view_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -78,6 +78,6 @@
         ]
       }
     },
-    "timestamp": 1604329341
+    "timestamp": 1604329797
   }
 }

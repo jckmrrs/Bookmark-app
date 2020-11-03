@@ -10,11 +10,12 @@ class Bookmark_Manager < Sinatra::Base
 
   post '/bookmarks' do
     session[:name] = params[:username]
+    Bookmarks.add(params[:url]) if params[:url]
+    @bookmarks = Bookmarks.all
     redirect '/bookmarks'
   end
 
   get '/bookmarks' do
-    p ENV
     @name = session[:name]
     @bookmarks = Bookmarks.all
     erb :bookmarks

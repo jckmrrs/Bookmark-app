@@ -14,7 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  ENV['ENVIRONMENT'] = 'test'
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -101,6 +101,14 @@ RSpec.configure do |config|
   require 'capybara/rspec'
   require 'simplecov'
   require 'simplecov-console'
+  require 'setup_test_database'
+
+  ENV['ENVIRONMENT'] = 'test'
+  RSpec.configure do |config|
+    config.before(:each) do
+      setup_test_database
+    end
+  end
 
   SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
     SimpleCov::Formatter::Console,
